@@ -1,5 +1,5 @@
 # Homebrew Formula for Inkog CLI
-# To use: brew tap inkog-io/inkog-homebrew && brew install inkog
+# To use: brew tap inkog-io/inkog && brew install inkog
 
 class Inkog < Formula
   desc "Static security scanner for AI agents"
