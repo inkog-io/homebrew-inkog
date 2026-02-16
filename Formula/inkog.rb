@@ -2,22 +2,22 @@
 # To use: brew tap inkog-io/inkog && brew install inkog
 
 class Inkog < Formula
-  desc "Static security scanner for AI agents"
+  desc "Pre-flight check for AI agents"
   homepage "https://inkog.io"
   license "Apache-2.0"
-  version "1.0.0"
+  version "1.1.0"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/inkog-io/inkog/releases/download/v#{version}/inkog-darwin-arm64"
-      sha256 "0109ffa08f408470aac1d506b3e7124824bef14d316fd31f0f2d6c38ce672a34"
+      sha256 "394167bc1ca1b1ec4a1504ef188256f118df437b9d4a67239132b7a07bce1800"
 
       def install
         bin.install "inkog-darwin-arm64" => "inkog"
       end
     else
       url "https://github.com/inkog-io/inkog/releases/download/v#{version}/inkog-darwin-amd64"
-      sha256 "e7f4b0572db6e46700f4837a4cd4386ac3757b4fb5b14ca2b7a31cfa9a045504"
+      sha256 "261bbb42917b2d0a585573d84fe94c32e9327e5c474c8d5ad6f6ad3ada0d9db9"
 
       def install
         bin.install "inkog-darwin-amd64" => "inkog"
@@ -28,14 +28,14 @@ class Inkog < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/inkog-io/inkog/releases/download/v#{version}/inkog-linux-arm64"
-      sha256 "a55ad118e86aca11954e2fd200bff90c28b0c827b47d941d065dc994c22abac3"
+      sha256 "7324f7a859660bdabbced2f5d72eaa683f7de4e21188c57c22376ba4e0f4f01a"
 
       def install
         bin.install "inkog-linux-arm64" => "inkog"
       end
     else
       url "https://github.com/inkog-io/inkog/releases/download/v#{version}/inkog-linux-amd64"
-      sha256 "f51959327e8a3809cfc058abc84e8aa3f9442a8b6482cd2001b3adcaf2c87a96"
+      sha256 "3815338e1a97209510c1f6977d3b4fc5d7f362d64d8399c920d9d309f1d6ce31"
 
       def install
         bin.install "inkog-linux-amd64" => "inkog"
