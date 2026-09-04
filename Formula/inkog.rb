@@ -5,19 +5,19 @@ class Inkog < Formula
   desc "Pre-flight check for AI agents"
   homepage "https://inkog.io"
   license "Apache-2.0"
-  version "1.1.0"
+  version "1.2.2"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/inkog-io/inkog/releases/download/v#{version}/inkog-darwin-arm64"
-      sha256 "394167bc1ca1b1ec4a1504ef188256f118df437b9d4a67239132b7a07bce1800"
+      sha256 "d18b8298774b88f2c26543da9ad454f98ab7c72d826d3cc01cf149bb965d1b0c"
 
       def install
         bin.install "inkog-darwin-arm64" => "inkog"
       end
     else
       url "https://github.com/inkog-io/inkog/releases/download/v#{version}/inkog-darwin-amd64"
-      sha256 "261bbb42917b2d0a585573d84fe94c32e9327e5c474c8d5ad6f6ad3ada0d9db9"
+      sha256 "0e9ff648f27a1cf67440fe960aabc33b6e010d332d385391a7b7ecf773cbbbec"
 
       def install
         bin.install "inkog-darwin-amd64" => "inkog"
@@ -28,14 +28,14 @@ class Inkog < Formula
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/inkog-io/inkog/releases/download/v#{version}/inkog-linux-arm64"
-      sha256 "7324f7a859660bdabbced2f5d72eaa683f7de4e21188c57c22376ba4e0f4f01a"
+      sha256 "d26b3967607eb57d66bf046a4f5944535adb768caa6c50bd85c57f17e55532c8"
 
       def install
         bin.install "inkog-linux-arm64" => "inkog"
       end
     else
       url "https://github.com/inkog-io/inkog/releases/download/v#{version}/inkog-linux-amd64"
-      sha256 "3815338e1a97209510c1f6977d3b4fc5d7f362d64d8399c920d9d309f1d6ce31"
+      sha256 "643fcaccb352fc288cde4f95e6cacf813fbf20a772077eeb362b2b1adbe76f3d"
 
       def install
         bin.install "inkog-linux-amd64" => "inkog"
